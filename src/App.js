@@ -6,6 +6,7 @@ import Products from './components/Products';
 import { productData, productDataTwo } from './components/Products/data';
 import Feature from './components/Feature';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Products heading='Premium Cake Pops' data={productData} />
       <Feature />
       <Products heading='Basic Cake Pops' data={productDataTwo} />
+      <Contact />
       <Footer />
     </Router>
   );

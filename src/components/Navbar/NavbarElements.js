@@ -27,9 +27,8 @@ export const NavLink = styled(Link)`
 export const NavIcon = styled.div`
   display: block;
   position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
+  top: 1.25rem;
+  right: 1.25rem;
   color: #fff;
 `;
 
@@ -39,10 +38,12 @@ export const CakePopLogo = styled.i`
   height: 3rem;
   width: 3rem;
   cursor: pointer;
-  transform: translate(-50%, 35%);
-
+  transition: 0.3s ease-in-out;
   @media screen and (max-width: 400px) {
     height: 2.5rem;
     width: 2.5rem;
+  }
+  &:hover {
+    transform: scale(1.1);
   }
 `;

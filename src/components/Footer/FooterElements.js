@@ -6,7 +6,7 @@ export const FooterContainer = styled.footer`
 `;
 
 export const FooterWrap = styled.div`
-  padding: 16px 24px;
+  padding: 16px 34px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,7 +48,7 @@ export const SocialIcons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 240px;
+  width: 1rem;
 `;
 
 export const SocialIconLink = styled.a`
