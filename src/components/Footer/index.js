@@ -1,5 +1,7 @@
 import React from "react";
 import { FaInstagram } from "react-icons/fa";
+import { Link } from "react-scroll";
+
 import {
   FooterContainer,
   FooterWrap,
@@ -16,7 +18,19 @@ const Footer = () => {
       <FooterWrap>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to="/">Chic Pops</SocialLogo>
+            <SocialLogo to="/">
+              <Link
+                activeClass="active"
+                to="chicpops"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={600}
+              >
+                Chic Pops
+              </Link>
+              
+            </SocialLogo>
             <SocialIcons>
               <SocialIconLink
                 href="//www.instagram.com/chic.pops.london/"

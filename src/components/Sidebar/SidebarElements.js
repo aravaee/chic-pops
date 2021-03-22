@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
 
 export const SidebarContainer = styled.aside`
@@ -37,54 +36,22 @@ export const Icon = styled.div`
 export const SidebarMenu = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 80px);
+  grid-template-rows: repeat(4, 80px);
   text-align: center;
 
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(3, 60px);
+    grid-template-rows: repeat(4, 60px);
   }
+
 `;
 
-export const SidebarLink = styled(Link)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  text-decoration: none;
-  list-style: none;
-  transition: 0.2s ease-in-out;
-  color: #fff;  
-  cursor: pointer;
-
-  &:hover {
-    color: #745C4B;
-    transition: 0.2s ease-in-out;
-    transform: translateY(-2px);
-  }
-`;
 
 export const SideBtnWrap = styled.div`
   display: flex;
   justify-content: center;
 `;
 
-export const SidebarRoute = styled(Link)`
-  background: #745C4B;
-  white-space: nowrap;
-  padding: 16px 24px;
+export const SocialIconLink = styled.a`
   color: #fff;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-  text-decoration: none;
-  border-radius: 1rem;
-
-  &:hover {
-    transition: 0.2s ease-in-out;
-    background: #F9E784;
-    color: #745C4B;
-    transform: translateY(-2px);
-  }
+  font-size: 44px;
 `;

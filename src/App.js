@@ -13,8 +13,10 @@ function App() {
     <Router>
       <GlobalStyle />
       <Hero />
-      <Products heading='Premium Cake Pops' data={productData} />
-      <Feature />
+      <div id="premium"></div>
+      <Products heading='Premium Cake Pops' data={productData}/>
+      <Feature/>
+      <div id="basic"></div>
       <Products heading='Basic Cake Pops' data={productDataTwo} />
       <Contact />
       <Footer />

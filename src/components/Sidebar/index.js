@@ -1,13 +1,25 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-scroll";
+import { FaInstagram } from "react-icons/fa";
 import {
   SidebarContainer,
   Icon,
   CloseIcon,
   SidebarMenu,
-  SidebarLink,
-  SidebarRoute,
-  SideBtnWrap
-} from './SidebarElements';
+  SocialIconLink,
+  SideBtnWrap,
+} from "./SidebarElements";
+
+const linkStyle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  fontSize: "1.5rem",
+  textDecoration: "none",
+  listStyle: "none",
+  color: "#fff",
+  cursor: "pointer",
+};
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
@@ -16,12 +28,64 @@ const Sidebar = ({ isOpen, toggle }) => {
         <CloseIcon />
       </Icon>
       <SidebarMenu>
-        <SidebarLink to='/'>Premium</SidebarLink>
-        <SidebarLink to='/'>Basic</SidebarLink>
-        <SidebarLink to='/'>Customize</SidebarLink>
+        <Link
+          onClick={toggle}
+          style={linkStyle}
+          activeClass="active"
+          to="premium"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={600}
+        >
+          Premium
+        </Link>
+        <Link
+          onClick={toggle}
+          style={linkStyle}
+          activeClass="active"
+          to="customize"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={600}
+        >
+          Customize
+        </Link>
+        <Link
+          onClick={toggle}
+          style={linkStyle}
+          activeClass="active"
+          to="basic"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={600}
+        >
+          Basic
+        </Link>
+        <Link
+          onClick={toggle}
+          style={linkStyle}
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={600}
+        >
+          Contact
+        </Link>
       </SidebarMenu>
       <SideBtnWrap>
-        <SidebarRoute to='/'>Order Now</SidebarRoute>
+        <SocialIconLink
+          href="//www.instagram.com/chic.pops.london/"
+          target="_blank"
+          aria-label="Instagram"
+          rel="noopener noreferrer"
+        >
+          <FaInstagram />
+        </SocialIconLink>
       </SideBtnWrap>
     </SidebarContainer>
   );

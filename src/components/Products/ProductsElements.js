@@ -63,14 +63,15 @@ export const ProductPrice = styled.p`
   font-size: 2rem;
 `;
 
-export const ProductButton = styled.button`
+export const ProductButton = styled.div`
   font-size: 1rem;
-  padding: 1rem 1.75rem;
+  padding: 0.5rem 1.75rem;
   border: none;
   background: #b76e79;
   color: #fff;
   transition: 0.2 ease-out;
   border-radius: 1rem;
+  cursor: pointer;
   &:hover {
     transition: 0.2s ease-in-out;
     background: #f9e784;

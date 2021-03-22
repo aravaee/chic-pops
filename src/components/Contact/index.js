@@ -53,7 +53,7 @@ const Contact = () => {
   };
 
   return (
-    <ContactContainer>
+    <ContactContainer id="contact">
       <h1>Contact Me</h1>
       <ContactForms
         id="contact-form"

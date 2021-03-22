@@ -48,7 +48,7 @@ export const HeroP = styled.p`
   margin-bottom: 2rem;
 `;
 
-export const HeroBtn = styled.button`
+export const HeroBtn = styled.div`
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   padding: 1rem clamp(1.2rem, 2.5vw, 2rem);
   border: none;
@@ -56,6 +56,7 @@ export const HeroBtn = styled.button`
   color: #fff;
   transition: 0.2s ease-out;
   border-radius: 1rem;
+  text-transform: none;
 
   &:hover {
     background: #F9E784;

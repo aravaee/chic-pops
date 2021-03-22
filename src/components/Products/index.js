@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   ProductsContainer,
   ProductWrapper,
@@ -10,8 +10,9 @@ import {
   ProductInfo,
   ProductDesc,
   ProductPrice,
-  ProductButton
-} from './ProductsElements';
+  ProductButton,
+} from "./ProductsElements";
+import { Link } from "react-scroll";
 
 const Products = ({ heading, data }) => {
   return (
@@ -27,7 +28,18 @@ const Products = ({ heading, data }) => {
                 <ProductTitle>{product.name}</ProductTitle>
                 <ProductDesc>{product.desc}</ProductDesc>
                 <ProductPrice>{product.price}</ProductPrice>
-                <ProductButton>{product.button}</ProductButton>
+                <ProductButton>
+                  <Link
+                    activeClass="active"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={600}
+                  >
+                    {product.button}
+                  </Link>
+                </ProductButton>
               </ProductInfo>
             </ProductCard>
           );
