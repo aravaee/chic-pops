@@ -7,7 +7,9 @@ import { productData, productDataTwo } from './components/Products/data';
 import Feature from './components/Feature';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
-
+import Slider from './components/Slider';
+import { SliderData } from "./components/Slider/SliderData";
+import Party from "./components/Party"
 function App() {
   return (
     <Router>
@@ -18,6 +20,8 @@ function App() {
       <Feature/>
       <div id="basic"></div>
       <Products heading='Basic Cake Pops' data={productDataTwo} />
+      <Slider slides={SliderData}/>
+      <Party />
       <Contact />
       <Footer />
     </Router>

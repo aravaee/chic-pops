@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import FeaturePic from '../../images/banner-cake-pop.jpg';
+import styled from "styled-components";
+import FeaturePic from "../../images/banner-cake-pop.jpg";
 
 export const FeatureContainer = styled.div`
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.1)),
     url(${FeaturePic});
   height: 100vh;
   max-height: 500px;
@@ -17,12 +17,18 @@ export const FeatureContainer = styled.div`
   padding: 0 1rem;
 
   h1 {
-    font-size: clamp(3rem, 5vw, 5rem);
+    font-size: clamp(2.5rem, 5vw, 5rem);
   }
 
   p {
     margin-bottom: 1rem;
     font-size: clamp(1rem, 3vw, 2rem);
+  }
+
+  @media screen and (max-width: 768px) {
+    p {
+      padding-top: 1rem;
+    }
   }
 `;
 export const FeatureButton = styled.div`
@@ -34,11 +40,16 @@ export const FeatureButton = styled.div`
   transition: 0.2s ease-out;
   cursor: pointer;
   border-radius: 1rem;
-  
+
   &:hover {
     transition: 0.2s ease-in-out;
-    background: #F9E784;
-    color: #745C4B;
+    background: #f9e784;
+    color: #745c4b;
     transform: translateY(-2px);
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
   }
 `;
